@@ -21,10 +21,13 @@ Route::get('/hello', function () {
 Route::get('/users/{id}/{name}', function($id, $name){
     return 'This is user '.$name.' with an id of '.$id;
 });
-*/
-
-Route::get('/', 'PagesController@index');
-
 Route::get('/about', function(){
     return view('pages.about');
 });
+*/
+
+//links routes to PagesController in HTTP Folder.
+//The actual pages are in resources/views/pages
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');

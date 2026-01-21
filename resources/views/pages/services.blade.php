@@ -7,7 +7,7 @@
         <title>{{config('app.name', 'LSAPP')}}</title>
     </head>
     <body>
-         <h1>About</h1>
-         <p>This is the About Page</p>
+         <h1>Services</h1>
+         <p>This is services page" Youtube series</p>
     </body>
 </html>
