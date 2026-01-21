@@ -4,6 +4,6 @@ seciton--}}
 
 {{-- Wrap content in @section and @endsection --}}
 @section('content')
-    <h1>About</h1>
+    <h1>{{$title}}</h1>
     <p>This is the About Page</p>
 @endsection
