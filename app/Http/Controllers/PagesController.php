@@ -23,7 +23,7 @@ class PagesController extends Controller
     public function services(){
         //creating $data array to pass 'title' and 'services'
         $data = array(
-            'title' => 'Our Services',
+            'title' => 'Services',
             'services' => ['Web Design', 'Programming', 'SEO']
         );
         return view('pages.services', $data);
