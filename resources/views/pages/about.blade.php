@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{config('app.name', 'LSAPP')}}</title>
-    </head>
-    <body>
-         <h1>About</h1>
-         <p>This is the About Page</p>
-    </body>
-</html>
+{{--extends the html layout in views/layouts/app.blade.php to this
+seciton--}}
+@extends('layouts.app')
+
+{{-- Wrap content in @section and @endsection --}}
+@section('content')
+    <h1>About</h1>
+    <p>This is the About Page</p>
+@endsection
