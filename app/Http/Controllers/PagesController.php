@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function index(){
         //passing in $title to pages/index.blade.php
-        $title = 'Welcome to Laravel!';
+        $title = 'Welcome to Filtrex Chat!';
         return view('pages.index', compact('title'));
         //alternative method to pass in $title in the line below
         //return view('pages.index')->with('title, $title')

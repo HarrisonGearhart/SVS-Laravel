@@ -1,19 +1,43 @@
 @if(count($errors) > 0)
-    @foreach ($errors->all() as $error)
-        <div class="alert alert-danger">
-            {{ $error }}
-        </div>
-    @endforeach
+    @push('scripts')
+    <script>
+        $(document).ready(function() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: '<ul style="text-align: left; list-style-position: inside;">@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul>',
+            });
+        });
+    </script>
+    @endpush
 @endif
 
 @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+    @push('scripts')
+    <script>
+        $(document).ready(function() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: '{{ session('success') }}',
+                timer: 3000,
+                showConfirmButton: false
+            });
+        });
+    </script>
+    @endpush
 @endif
 
 @if(session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
+    @push('scripts')
+    <script>
+        $(document).ready(function() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: '{{ session('error') }}',
+            });
+        });
+    </script>
+    @endpush
 @endif

@@ -10,9 +10,9 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <!-- Branding Image -->
+            <!-- Branding Text Only -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                Filtrex Chat
             </a>
         </div>
 
@@ -27,6 +27,13 @@
               <li><a href="/about">About</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/posts">Blog</a></li>
+            </ul>
+
+            <!-- Logo Section (centered and stretched wide) -->
+            <ul class="nav navbar-nav" style="flex: 1; display: flex; justify-content: center; align-items: center; padding-left: 400px;">
+                <li style="padding: 8px 20px;">
+                    <img src="{{ asset('images/logo.png') }}" alt="Filtrex Chat Logo" style="height: 32px; width: auto; max-width: 800px; object-fit: contain;">
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -44,9 +51,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/home">Dashboard</a></li>
                             <li>
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">
+                                <a href="#" class="logout-link">
                                     Logout
                                 </a>
 
